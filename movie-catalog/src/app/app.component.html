@@ -1,0 +1,39 @@
+<header class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand text-danger fw-bold" href="#">Movie Catalog</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/admin-dashboard">Admin Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/add-movie">Agregar Película</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/user-movies">Películas de Usuario</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  
+  <main class="bg-dark text-light min-vh-100">
+    <div class="container py-5">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+  

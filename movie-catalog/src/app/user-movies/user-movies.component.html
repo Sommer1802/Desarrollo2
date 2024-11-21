@@ -1,0 +1,31 @@
+<div class="container py-5">
+  <h2 class="text-center text-danger mb-4">Películas Disponibles</h2>
+  <div class="row">
+    <div *ngFor="let movie of movies" class="col-md-4 mb-4">
+      <div class="card h-100 shadow-lg">
+        <img
+          [src]="movie.poster"
+          alt="Poster"
+          class="card-img-top img-fluid"
+          style="max-height: 300px; object-fit: cover;"
+        />
+        <div class="card-body">
+          <h5 class="card-title text-center text-dark">{{ movie.title }}</h5>
+          <p class="card-text text-center text-muted">
+            {{ movie.genre }} - ${{ movie.rentPrice }} / ${{ movie.buyPrice }}
+          </p>
+        </div>
+        <div class="card-footer d-flex justify-content-around">
+          <button class="btn btn-warning btn-sm" (click)="onRentMovie(movie.id)">
+            Rentar
+          </button>
+          <button class="btn btn-success btn-sm" (click)="onBuyMovie(movie.id)">
+            Comprar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
